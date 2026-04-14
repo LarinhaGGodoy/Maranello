@@ -1,0 +1,20 @@
+{
+  "name": "maranello",
+  "version": "1.0.0",
+  "description": "Sistema CRUD para gerenciamento de peças de motos e carros. Desenvolvido com Node.js (Sequelize) e React, possui estrutura modular, autenticação JWT, autorização por roles, validações e integração completa entre front-end e back-end.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql": "^2.18.1"
+  }
+}
