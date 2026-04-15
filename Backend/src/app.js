@@ -1,10 +1,16 @@
-console.log('APP ATUALIZADO CARREGADO');
 const express = require('express');
 const app = express();
 
 app.use(express.json());
 
 const connection = require('./database');
+
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
+const authRoutes = require('./routes/authRoutes');
+app.use('/auth', authRoutes);
+
 
 app.get('/teste', (req, res) => {
   res.send('Rota funcionando');
@@ -41,8 +47,6 @@ app.post('/usuarios', (req, res) => {
   );
 });
 
-module.exports = app;
-
 app.put('/usuarios/:id', (req, res) => {
   const { id } = req.params;
   const { nome, email } = req.body;
@@ -60,3 +64,5 @@ app.put('/usuarios/:id', (req, res) => {
     });
   });
 });
+
+module.exports = app;
